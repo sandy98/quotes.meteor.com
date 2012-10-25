@@ -1,0 +1,24 @@
+<template name="quotes">
+  <ul>
+  {{#each quotes}}
+    {{> quote}}
+  {{/each}}
+  </ul>
+</template>
+
+<template name="quote">
+  <li class="list-item-custom">
+    <div class="row-fluid" style="padding-left: 1em;">
+      <span class="{{#unless is_editing}} {{selected}} {{/unless}}" style="font-weight: bold; font-size: small;">
+        {{#if is_editing}}
+          <input style="width: 60em;" type="text" name="quote-text" value="{{contents}}" />
+          <span class="btn delete" title="Delete quote by {{author}}"><i class="icon-remove"></i></button>
+        {{else}}
+          {{contents}}
+        {{/if}}
+      </span> 
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <span class="label label-success pull-right">{{author}}</span>
+    </div>
+  </li>
+</template>

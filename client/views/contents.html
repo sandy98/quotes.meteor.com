@@ -1,0 +1,43 @@
+<template name="contents">
+  <div class="row">
+    <h1 style="text-align: center; background: #eeeeee; padding: 0.5em; border-radius: 15px;">
+      Welcome to Famous Quotes!
+    </h1>
+  </div>
+  <div class="row" style="text-align: right; margin-bottom: 0.5em;">
+    <span class="btn btn-small">{{loginButtons align="right"}}</span>
+  </div>
+  <div class="row">
+    <input type="text" placeholder="Insert a new quote" name="new-quote" style="width: 80em;" />
+  </div>
+  <div class="row">
+    <hr/>
+  </div>
+  <div class="row">
+    <div style="max-height: 12.5em; min-height: 12.5em; overflow: auto; padding-right: 1.5em;">
+	{{> quotes }}
+    </div>
+  </div>
+  <div class="row">
+    <hr/>
+  </div>
+  <div class="row">
+    <span class="label label-info" style="padding: 0.4em; border-radius: 5px;">Total Quotes: </span>
+    <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+    <span class="well well-small" style="border: 1px solid; border-radius: 8px; font-weight: bold; color: navy;">{{total}}</span>
+  </div>
+  <div class="row">
+    <hr/>
+  </div>
+  <div class="row">
+    <div class="label label-warning span2" style="padding: 0.5em; border-radius: 8px; text-align: center;">
+      Filter by author
+    </div>
+    <div class="span5">
+	<input type="text" placeholder="Filter quotes by author" name="filter-quote" style="width: 15em;" />
+    </div>
+    <div class="">
+	<button class="btn" id="reset-filter">Reset filter</button>
+    </div>
+  </div>
+</template>
